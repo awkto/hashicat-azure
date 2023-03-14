@@ -9,6 +9,7 @@
 
 module "network" {
   source              = "Azure/network/azurerm"
+  version = "3.5.0"
   resource_group_name = azurerm_resource_group.myresourcegroup.name
   address_spaces      = ["10.0.0.0/16", "10.2.0.0/16"]
   subnet_prefixes     = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
@@ -27,3 +28,9 @@ module "network" {
 
   depends_on = [azurerm_resource_group.example]
 }
+
+#module "network" {
+#  source  = "app.terraform.io/AwktopusOrg/network/azurerm"
+#  version = "3.5.0"
+  # insert required variables here
+#}
