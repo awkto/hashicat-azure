@@ -2,10 +2,10 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_resource_group" "myresourcegroup" {
-  name     = "altanch-workshop"
-  location = "eastus"
-}
+#resource "azurerm_resource_group" "myresourcegroup" {
+#  name     = "altanch-workshop"
+#  location = "eastus"
+#}
 
 module "network" {
   source              = "Azure/network/azurerm"
